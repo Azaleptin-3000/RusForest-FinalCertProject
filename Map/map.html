@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Русский лес-Карта</title>
+  <!-- Подключаем шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+    <header>
+        <div class="burger-menu">
+          <div class="burger-icon" id="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="menu">
+            <ul>
+                <li><a href="../Index/index.html">Главная</a></li>
+                <li><a href="../TableContent/tablecontent.html">Природные характеристики</a></li>
+                <li><a href="../Flora/flora.html">О деревьях леса</li>
+
+                <li><a href="../Store-Sale/store-sale.html">Саженцы деревьев</a></li>
+                <li><a href="../Contacts/contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <div class="h1-container">
+    <h1><span class="highlight">Русский лес</span><br>
+                                Карта лесов России</h1>
+  </div>
+
+  <div class="p-container">
+    <h2>Леса России</h2>
+    <iframe
+        src="https://pub.fgislk.gov.ru/map/?ysclid=m2ils7b4jh14288124"
+        style="border:0;"
+        width="100%" 
+        height="100%">
+    </iframe>
+    <p><br>
+    <a href="https://pub.fgislk.gov.ru/map/?ysclid=m2ils7b4jh14288124" 
+      target="_blank"
+      rel="noopener noreferrer">Интерактивная карта лесов России
+    </a>
+    </p>
+</div>
+  
+  <!-- Контейнер для корзины -->
+  <div id="cart-container" class="cart-container"></div>
+
+    <!-- Значок корзины с красным кружком для количества товаров -->
+    <div class="basket-icon">
+      <img src="../Img/Basket-1.svg" alt="Корзина" />
+        <div class="cart-count"></div> <!-- Элемент для отображения количества товаров -->
+    </div>
+
+
+  <!-- Подключение общего JS-скрипта для бургер-меню на всех страницах  -->
+  <script src="../Index/index.js"></script>
+  <!-- Подключение JS-скрипта для корзины  -->
+  <script src="sale.js"></script>
+
+</body>
+</html>

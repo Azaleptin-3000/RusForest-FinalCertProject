@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Русский лес-Корзина</title>
+  <!-- Подключаем шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="basket.css">
+   
+</head>
+
+<body>
+  <header>
+    <div class="burger-menu">
+      <div class="burger-icon" id="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../Index/index.html">Главная</a></li>
+          <li><a href="../TableContent/tablecontent.html">Природные характеристики</a>
+          <li><a href="../Flora/flora.html">О деревьях леса</li>
+          <li><a href="../Map/map.html">Карта лесов России</a></li>
+          <li><a href="../Store-Sale/store-sale.html">Саженцы деревьев</a></li>
+          <li><a href="../Contacts/contacts.html">Контакты</a></li>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="h1-container">
+    <h1><span class="highlight">Русский лес</span></h1>
+  </div>
+
+  <div class="p-container">
+    <p>Корзина</p>
+    <!-- Корзина -->
+    <div id="cart-container">
+      <h2>Ваши саженцы</h2>
+      <hr />
+      <div id="cart-items"></div>
+      <div class="button-container">
+      <div id="total-cost"></div>
+        <button id="checkout-button" class="cart-button">Оплатить</button>
+        <button id="remove-item-button" class="cart-button">Удалить выбранные товары</button>
+        <button id="clear-cart-button" class="cart-button">Очистить корзину</button>
+    </div>
+    </div>
+  </div>
+    
+<script src="basket.js"></script> <!-- Подключаем после определения элементов в HTML -->
+<script src="../Index/index.js"></script> <!-- Подключаем "бургер-меню"-скрипт -->
+
+</body>
+</html>

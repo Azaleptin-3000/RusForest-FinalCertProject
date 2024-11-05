@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Русский лес-Саженцы деревьев</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="store-sale.css">
+</head>
+
+<body>
+  <header>
+    <div class="burger-menu">
+      <div class="burger-icon" id="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="../Index/index.html">Главная</a></li>
+          <li><a href="../TableContent/tablecontent.html">Природные характеристики</a>
+          <li><a href="../Flora/flora.html">О деревьях леса</li>
+          <li><a href="../Map/map.html">Карта лесов России</a></li>
+
+          <li><a href="../Contacts/contacts.html">Контакты</a></li>
+          </li>
+        </ul>
+      </nav>
+    </div> 
+  </header>
+
+  <div class="h1-container">
+    <h1><span class="highlight">Русский лес</span><br>
+      <span class="second-line">Посади дерево</span>
+    </h1>
+  </div>
+
+  <div class="p-container">
+    <h2>Посадить дерево - доброе дело!</h2>
+    <p>Здесь представлены саженцы, которые вы можете посадить и внести свой «зелёный» вклад в озеленение России</p>
+    
+    <div id="gall">
+      <div class="item">
+          <img class="first-image"
+          src="../img/Tree-Seedlings/Kedr_3goda_.jpg"
+          data-name="Кедр сибирский (Pinus sibirica)"
+          data-price="3000"
+          tabindex="0" 
+          border="3"
+          alt="Кедр сибирский"/>
+        
+          <div class="item-details">
+          <p><b>Кедр сибирский</b><br><i>(Pinus sibirica)</i></p>
+          <p><b>3000 руб.</b></p>
+          <button class="buy-button">Купить</button>
+        </div>
+      </div>
+
+      <div class="item">
+          <img src="../img/Tree-Seedlings/9.webp" 
+          data-name="Сосна обыкновенная (Pinus sylvestris)"
+          data-price="2000"
+          tabindex="0" 
+          border="3"
+          alt="Сосна обыкновенная"/>
+          
+        <div class="item-details">
+          <p><b>Сосна обыкновенная</b><br><i>(Pinus sylvestris)</i></p>
+          <p><b>2000 руб.</b></p>
+        <button class="buy-button">Купить</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../img/Tree-Seedlings/Akrokona-1000x1000.jpg" 
+        data-name="Ель обыкновенная (Pícea ábies)" 
+        data-price="1000" 
+        tabindex="0" 
+        border="3"
+        alt="Ель обыкновенная"/>
+        
+        <div class="item-details">
+          <p><b>Ель обыкновенная</b><br><i>(Pícea ábies)</i></p>
+          <p><b>1000 руб.</b></p>
+        <button class="buy-button">Купить</button>
+        </div>
+      </div>
+
+        <div class="item">
+          <img src="../img/Tree-Seedlings/51.jpg" 
+          data-name="Берёза повислая (Betula pendula)" 
+          data-price="1000" 
+          tabindex="0" 
+          border="3"
+          alt="Берёза повислая"/>
+
+          <div class="item-details">
+            <p><b>Берёза повислая</b><br><i>(Betula pendula)</i></p>
+            <p><b>1000 руб.</b></p>
+          <button class="buy-button">Купить</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="../img/Tree-Seedlings/f-1878.jpg" 
+          data-name="Дуб черешчатый (Quercus robur)" 
+          data-price="1000" 
+          tabindex="0" 
+          border="3"
+          alt="уб черешчатый"/>
+          <div class="item-details">
+            <p><b>Дуб черешчатый</b><br><i>(Quercus robur)</i></p>
+            <p><b>2000 руб.</b></p>
+          <button class="buy-button">Купить</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Контейнер для корзины -->
+    <div id="cart-container" class="cart-container"></div>
+    <!-- Значок корзины с красным кружком для количества товаров -->
+    <div class="basket-icon">
+      <img src="../Img/Basket-1.svg" alt="Корзина" />
+        <div class="cart-count"></div> <!-- Элемент для отображения количества товаров -->
+      </div>
+
+  <!-- Подключение общего JS-скрипта для бургер-меню на всех страницах  -->
+  <script src="../Index/index.js"></script>
+  <!-- Подключение JS-скрипта для корзины  -->
+  <script src="sale.js"></script>
+  <script src="store-sale.js"></script>
+  
+  </body>
+  </html>

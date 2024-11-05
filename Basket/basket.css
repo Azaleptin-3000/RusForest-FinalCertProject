@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+@font-face {
+  font-family: 'Chalkduster';
+  src: url('../fonts/Chalkduster.ttf') format('truetype');
+}
+
+/* Вид "иконки" свёрнутого бургер-меню */
+.burger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 20; /* Увеличим z-index для бургер-иконки */
+}
+
+.burger-icon span {
+  width: 4rem;
+  height: 0.6rem;
+  background-color: #6a8501;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+}
+
+/* Открытое меню */
+.menu {
+  width: 60vw; /* Ширина открытого меню */
+  max-width: 18rem;
+  padding: 1rem 2rem; /* Уменьшенные отступы сверху и снизу */
+  background-color: rgba(60, 66, 0, 0.7);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem; /* Скругление углов */
+  right: 2rem; /* Отступ от правого края */
+  top: 5rem; /* Настройка отступа сверху */
+  position: absolute; /* Позиционирование */
+  display: none; /* Скрытое состояние по умолчанию */
+}
+
+/* Активное состояние меню */
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 0.8rem 0;
+}
+
+.menu ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+body {
+  min-height: 100vh;
+  background: url('../img/fonstola.ru_116516.jpg') no-repeat;
+  background-position: center 75%;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.h1-container {
+  display: flex;
+  justify-content: flex-start; /* Выравниваем контейнер h1 по левому краю */
+  padding-left: 10vw; /* Добавляем отступ слева для выравнивания */
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin-top: 4vh; /* Отступы сверху и снизу */
+  padding: 0.1rem 4rem 1rem; /* Отступы сверху и по бокам от рамки h1 */
+  border: 0.2rem solid rgb(68, 110, 26); /* Толщина и цвет рамки */
+  border-radius: 2rem; /* Скругление рамки */
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  max-width: 60%; /* Увеличим ширину */
+}
+
+.highlight {
+  font-family: 'Chalkduster', sans-serif; /* Шрифт Chalkduster */
+  font-size: 3rem;
+  line-height: 4.5rem;
+  margin-bottom: 0.25rem !important;
+}
+
+h1 .second-line {
+  display: block;
+  margin-left: auto; /* Смещает текст к правому краю */
+  text-align: right; /* Выравнивание по правому краю */
+  margin-right: 2rem; /* Увеличиваем отступ справа для смещения текста влево */
+}
+
+.p-container h2 {
+  padding-left: 1rem; /* Отступ от левого края плашки */
+  margin: 0; /* Убираем верхний и нижний отступы */
+  font-size: 1.5rem;
+  }
+
+.p-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(242, 246, 222, 0.7);
+  border-radius: 1rem;
+  padding: 5rem;
+  margin: 3vh auto;
+  max-width: 50%; /* Уменьшенная ширина */
+  margin-left: 3vw; /* Отступ от левого края страницы */
+}
+
+.p-container p {
+  font-weight: bold;
+  color: green; /* Зеленый цвет для текста */
+  margin-left: 2rem; /* Отступ от левого края контейнера */
+  font-size: 1.8rem;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 1rem; /* Расстояние между кнопками */
+  justify-content: center; /* Выровнять кнопки по центру */
+  margin-top: 1rem; /* Отступ сверху */
+}
+
+.cart-button {
+  background-color: rgb(34, 139, 34); /* Зелёный цвет */
+  color: white; /* Белый текст */
+  padding: 0.75rem 1.5rem; /* Отступы для увеличения кнопки */
+  font-size: 1.25rem; /* Крупный шрифт */
+  border: none; /* Убираем обводку */
+  border-radius: 0.5rem; /* Закругление углов */
+  box-shadow: 0 0.5rem 1rem rgba(0, 128, 0, 0.6); /* Тень */
+  cursor: pointer; /* Указатель при наведении */
+  transition: transform 0.2s, box-shadow 0.2s; /* Плавная анимация */
+}
+
+.cart-button:hover {
+  transform: translateY(-0.1rem); /* Поднимает кнопку при наведении */
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 128, 0, 0.8); /* Более яркая тень */
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.remove-checkbox {
+  margin-right: 10px;
+}
+
+
+    /* Медиазапросы */
+
+/* Ширина экрана до 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5.5rem;
+    padding: 0.4rem 2.5rem;
+    margin-left: 5vw;
+  }
+
+  .p-container {
+    max-width: 80%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .burger-icon span {
+    width: 3.5rem;
+  }
+
+  .menu ul li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ширина экрана до 800px */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+    padding: 0.3rem 2rem;
+    margin-left: 3vw;
+  }
+
+  .p-container {
+    max-width: 85%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .burger-icon span {
+    width: 3rem;
+  }
+
+  .menu ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Ширина экрана до 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 90%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .burger-icon span {
+    width: 2.5rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ширина экрана до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 95%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .burger-icon span {
+    width: 2rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.9rem;
+  }
+}

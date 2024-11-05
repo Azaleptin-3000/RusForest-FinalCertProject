@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Chalkduster';
+  src: url('../fonts/Chalkduster.ttf') format('truetype');
+}
+
+/* Вид "иконки" свёрнутого бургер-меню */
+.burger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 20; /* Увеличим z-index для бургер-иконки */
+}
+
+.burger-icon span {
+  width: 4rem;
+  height: 0.6rem;
+  background-color: #6a8501;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+}
+
+/* Открытое меню */
+.menu {
+  width: 60vw; /* Ширина открытого меню */
+  max-width: 18rem;
+  padding: 0.5rem 2rem; /* Уменьшенные отступы сверху и снизу */
+  background-color: rgba(60, 66, 0, 0.7);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem; /* Скругление углов */
+  right: 2rem; /* Отступ от правого края */
+  top: 5rem; /* Настройка отступа сверху */
+  position: absolute; /* Позиционирование */
+  display: none; /* Скрытое состояние по умолчанию */
+}
+
+/* Активное состояние меню */
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 0.8rem 0;
+}
+
+.menu ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+body {
+  min-height: 100vh;
+  background: url('../img/a.allegroimg.com.original.117754.2f1ecae54f8db2fb123e3c2bb2c5.jpeg') no-repeat;
+  background-position: center 75%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Chalkduster', sans-serif;
+  font-size: 8.5rem; /* Адаптивный размер шрифта */
+  color: darkolivegreen; /* Цвет текста заголовка */
+  margin-top: 2rem; /* Отступ сверху */
+  margin-left: 7vw; /* Отступ от левого края */
+  border: 0.3rem solid rgb(68, 110, 26); /* Толщина и цвет рамки */
+  padding: 0.5rem 3rem; /* Внутренний отступ */
+  padding-bottom: 3rem; /* Увеличенный нижний отступ */
+  border-radius: 5rem; /* Скруглённые углы */
+  text-align: center; /* Центрирование текста */
+  display: inline-block; /* Блочный элемент с размерами по содержимому */
+  white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачная плашка для заголовка */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.text-wrapper {
+  margin-left: 0; /* Выравниваем текст по левой стороне заголовка */
+}
+
+.p-container {
+  background-color: rgba(242, 246, 222, 0.6); /* Полупрозрачная плашка для всех абзацев */
+  border-radius: 1.5rem;
+  padding: 1rem 2rem; /* Внутренние отступы */
+  margin-top: -1.5rem; /* Отступ от заголовка */
+  margin-left: 6vw;  /* Отступ слева */
+  margin-right: 6vw; /* Увеличенный отступ справа*/
+  max-width: 60%; /* Ограничение ширины */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.p-container p {
+  margin: 0.35rem !important; /* Отступ между абзацами */
+}
+
+p {
+  font-family: 'Roboto', sans-serif; /* Шрифт для текста */
+  font-size: 0.95rem; /* Размер шрифта для абзацев */
+  text-indent: 0.5rem; /* Красная строка */
+  text-align: justify; /* Выровнять текст по ширине */
+  word-wrap: break-word; /* Перенос слов при необходимости */
+}
+
+.nowrap {
+  white-space: nowrap; /* Запретить перенос строк внутри этого элемента */
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4.5rem; /* Уменьшение заголовка на малых экранах */
+  }
+
+  p {
+    font-size: 1rem; /* Уменьшение текста на малых экранах */
+  }
+
+  .container, .p-container {
+    padding: 1rem; /* Уменьшение отступов на малых экранах */
+  }
+
+  .wrapper {
+    padding: 3vw; /* Уменьшение отступов для моб. версий */
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem; /* Доп. уменьшение заголовка для смартфонов */
+  }
+
+  p {
+    font-size: 0.9rem; /* Размер шрифта для смартфонов */
+  }
+
+  .p-container, .wrapper {
+    padding: 1rem; /* Оптимизация отступов на малых экранах */
+  }
+}

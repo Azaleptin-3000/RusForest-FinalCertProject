@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+@font-face {
+  font-family: 'Chalkduster';
+  src: url('../fonts/Chalkduster.ttf') format('truetype');
+}
+
+/* Вид "иконки" свёрнутого бургер-меню */
+.burger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 20;
+}
+
+.burger-icon span {
+  width: 4rem;
+  height: 0.6rem;
+  background-color: #6a8501;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+}
+
+/* Открытое меню */
+.menu {
+  width: 60vw; /* Ширина открытого меню */
+  max-width: 18rem;
+  padding: 1rem 2rem; /* Уменьшенные отступы сверху и снизу */
+  background-color: rgba(60, 66, 0, 0.7);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem; /* Скругление углов */
+  right: 2rem; /* Отступ от правого края */
+  top: 5rem; /* Настройка отступа сверху */
+  position: absolute; /* Позиционирование */
+  display: none; /* Скрытое состояние по умолчанию */
+}
+
+/* Активное состояние меню */
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 0.8rem 0;
+}
+
+.menu ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+body {
+  min-height: 100vh;
+  background: url('../img/1648937391_33-39.jpg') no-repeat;
+  background-position: center 20%;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.h1-container {
+  display: flex;
+  justify-content: flex-start; /* Выравниваем контейнер h1 по левому краю */
+  padding-left: 10vw; /* Добавляем отступ слева для выравнивания */
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: darkolivegreen;
+  margin-top: 4vh; /* Отступы сверху и снизу */
+  padding: 0.1rem 4rem 1rem; /* Отступы сверху и по бокам от рамки h1 */
+  border: 0.2rem solid rgb(68, 110, 26); /* Толщина и цвет рамки */
+  border-radius: 2rem; /* Скругление рамки */
+  text-align: left;
+  background-color: rgba(250, 254, 218, 0.607);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  max-width: 60%; /* Увеличим ширину */
+}
+
+.highlight {
+  font-family: 'Chalkduster', sans-serif; /* Шрифт Chalkduster */
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+
+h1 .second-line {
+  display: block;
+  margin-left: auto; /* Смещает текст к правому краю */
+  text-align: right; /* Выравнивание по правому краю */
+  margin-right: 2rem; /* Увеличиваем отступ справа для смещения текста влево */
+}
+
+.p-container {
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание элементов */
+  background-color: rgba(242, 246, 222, 0.5);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 1.8vh; /* Отступ сверху */
+  margin-left: 4%; /* Прижимаем контейнер к левому краю */
+  max-width: 65%; /* Ограничиваем ширину контейнера */
+}
+
+.header-overlay {
+  padding: 1.8rem; /* Отступ внутри */
+  position: relative; /* Позволяет элементам располагаться внутри */
+  left: 0; /* Выравнивание влево */
+  border-radius: 2rem;
+  background: rgba(215, 225, 186, 0.7); /* Полупрозрачный фон */
+  width: 58%; /* Занимает всю ширину p-container */
+}
+
+.p-container h2 {
+  padding: 1rem 0 0; /* Отступ от левого края плашки и сверху */
+  padding-left: 1rem; /* Отступ от левого края плашки */
+  margin: 0; /* Убираем верхний и нижний отступы */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+  font-size: 1.5rem;
+  color: rgb(32, 68, 0);
+}
+
+.p-container h3 {
+  margin-top: -0.4rem;
+  margin-bottom: 0.8rem; /* Отступ снизу от заголовка */
+  font-size: 1.4rem;
+  text-align: center;
+  color: #1c2216;
+}
+
+.p-container p {
+  text-indent: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem; /* Уменьшаем отступ между h2 и текстом */
+  margin-left: 0.7rem;
+  margin-bottom: 0.5rem; /* Уменьшаем отступ между текстом и таблицей */
+}
+
+form {
+  background-color: rgba(75, 106, 41, 0.5);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Занимает всю ширину контейнера */
+  max-width: 18rem; /* Ограничиваем ширину формы */
+  margin: 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование элементов в форме */
+}
+
+.form-row {
+  display: flex; /* Выстраиваем формы в ряд */
+  justify-content: space-between; /* Пространство между формами */
+  margin-top: 1.8rem; /* Отступ сверху от заголовка */
+}
+
+.form-container {
+  flex: 1; /* Формы занимают равное пространство */
+  margin-right: 1rem; /* Отступ между формами */
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение элементов внутри формы */
+}
+
+.form-container:last-child {
+  margin-right: 0; /* Убираем отступ у последней формы */
+}
+
+/* Отключенный селектор 2-й формы
+.weather-form {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+} 
+
+/* Стили для группы форм */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Отступы между меткой и полем ввода */
+  width: 100%; /* Занять всю ширину контейнера */
+}
+
+.form-group label {
+  margin-top: 0.8rem; /* Отступ сверху */
+  font-weight: bold; /* Сделать текст жирным для выделения */
+}
+
+input, textarea {
+  padding: 0.5rem; /* Добавляем отступы внутри полей ввода */
+  border-radius: 0.5rem; /* Закругляем углы полей ввода */
+  border: 1px solid #ccc; /* Стилизация границы */
+  width: 100%; /* Занять всю ширину контейнера */
+  box-sizing: border-box; /* Учитываем отступы и границы при расчете ширины */
+}
+
+button {
+  width: 50%;
+  align: center;
+  font-weight: bold; /* Жирный текст */
+  font-size: 1rem; /* Увеличенный текст */
+  margin-top: 1rem;
+  padding: 0.7rem; /* Отступы внутри кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 0.5rem; /* Закругляем углы кнопок */
+  background-color: #5ca23f; /* Цвет фона кнопки */
+  color: white; /* Цвет текста на кнопке */
+  cursor: pointer; /* Курсор при наведении */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(99, 2, 131); /* Изменение цвета фона при наведении */
+}
+
+button:active {
+  transform: scale(0.98); /* Небольшое уменьшение при нажатии */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Пониженная тень */
+}
+
+.error-message {
+  color: #bb2929; /* Красный цвет для ошибок */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+
+.basket-icon {
+  position: fixed; /* Фиксируем значок на экране */
+  bottom: 2rem; /* Подняли от нижнего края страницы */
+  right: 1rem; /* Отступ от правого края */
+  cursor: pointer; /* Указатель при наведении */
+  width: 5rem; /* Ширина значка корзины */
+  height: auto; /* Автоматическая высота */
+  z-index: 100; /* Обеспечиваем, чтобы значок был выше других элементов */
+  box-shadow: 0 0.5rem 1rem rgba(32, 35, 25, 0.8); /* Добавили тень */
+}
+
+.basket-icon img {
+  width: 100%; /* Значок будет занимать 100% ширины контейнера */
+  height: auto; /* Высота автоматически подстраивается */
+}
+
+.basket-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.cart-count {
+  position: absolute; /* Позволяет разместить кружок поверх значка корзины */
+  top: 0rem; /* Положение кружка относительно корзины */
+  right: 0rem; /* Положение кружка относительно корзины */
+  background-color: rgb(179, 3, 3); /* Цвет кружка */
+  color: white; /* Цвет текста в кружке */
+  border-radius: 50%; /* Скругление кружка */
+  padding: 0.2rem 0.5rem; /* Отступы внутри кружка */
+  font-size: 1.25rem; /* Размер шрифта */
+  display: none; /* Скрыто по умолчанию */
+}
+
+
+    /* Медиазапросы */
+
+/* Ширина экрана до 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5.5rem;
+    padding: 0.4rem 2.5rem;
+    margin-left: 5vw;
+  }
+
+  .p-container {
+    max-width: 80%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .burger-icon span {
+    width: 3.5rem;
+  }
+
+  .menu ul li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ширина экрана до 800px */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+    padding: 0.3rem 2rem;
+    margin-left: 3vw;
+  }
+
+  .p-container {
+    max-width: 85%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .burger-icon span {
+    width: 3rem;
+  }
+
+  .menu ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Ширина экрана до 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 90%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .burger-icon span {
+    width: 2.5rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ширина экрана до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 95%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .burger-icon span {
+    width: 2rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.9rem;
+  }
+}
