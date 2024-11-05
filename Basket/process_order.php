@@ -5,6 +5,8 @@ $db = 'form_data'; // Убедитесь, что здесь указано пр�
 $user = 'root'; // Ваше имя пользователя
 $pass = ''; // Ваш пароль
 
+header('Content-Type: application/json');
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -30,4 +32,7 @@ try {
 } catch (Exception $e) {
     echo json_encode(["status" => "error", "message" => "Ошибка: " . $e->getMessage()]);
 }
+
+echo json_encode(['status' => 'success', 'message' => 'Оплата прошла успешно']);
+
 ?>
