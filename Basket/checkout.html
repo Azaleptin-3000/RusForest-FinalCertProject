@@ -112,6 +112,21 @@
     // Устанавливаем отформатированное значение обратно в поле ввода
     input.value = value;
 }
+
+
+    // Разделение номера карты на группы по 4 цифры
+    document.getElementById('card_number').addEventListener('input', formatCardNumber);
+
+    function formatCardNumber(event) {
+        const input = event.target;
+        let value = input.value.replace(/\D/g, ''); // Убираем все нечисловые символы
+
+    // Форматируем в группы по 4 цифры
+    value = value.match(/.{1,4}/g)?.join(' ') || value;
+
+    input.value = value;
+}
+
     </script>
     
 </body>
