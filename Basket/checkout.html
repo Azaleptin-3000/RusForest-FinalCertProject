@@ -75,75 +75,47 @@
 
     <div class="container">
         <h2>Оформление заказа</h2>
-        <!-- Форма оформления заказа -->
-        <form action="process_order.php" method="POST">
-            <!-- Поле для имени клиента -->
+        <form id="checkout-form" action="process_order.php" method="POST">
             <input type="text" id="customer_name" name="customer_name" placeholder="Ваше имя" required>
-            
-            <!-- Поле для номера карты с максимальной длиной 19 символов -->
             <input type="text" id="card_number" name="card_number" placeholder="Номер карты" required maxlength="19">
-            
-            <!-- Поле для даты истечения срока действия карты -->
             <input type="text" id="expiry_date" placeholder="MM/YY" oninput="formatExpiryDate(this)">
-            
-            <!-- Поле для CVV кода -->
             <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
-            
-            <!-- Кнопка отправки формы -->
             <button type="submit">Оплатить</button>
         </form>
     </div>
     
     <script>
-        /* Обработчик отправки формы */
-        document.querySelector('form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Отменяем стандартное поведение отправки формы
+        document.querySelector('#checkout-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Останавливаем стандартное поведение формы
     
-            const formData = new FormData(this); // Собираем данные формы
+            const formData = new FormData(this);
             
-            // Отправка данных формы с использованием fetch
             fetch('process_order.php', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json()) // Преобразуем ответ в JSON
+            .then(response => response.json())
             .then(data => {
-                // Проверяем статус ответа
                 if (data.status === "success") {
-                    alert(data.message); // Показ успешного сообщения
-                    localStorage.removeItem('cart'); // Очистка корзины
-                    window.location.href = '../Basket/basket.html'; // Переход обратно в корзину
+                    alert(data.message); // Уведомление об успешном заказе
+                    localStorage.removeItem('cart'); // Очищаем корзину
+                    window.location.href = '../Basket/basket.html'; // Перенаправление обратно в корзину
                 } else {
-                    alert(data.message); // Показ сообщения об ошибке
+                    alert(data.message); // Уведомление об ошибке
                 }
             })
-            .catch(error => console.error('Ошибка:', error)); // Логирование ошибки в случае сбоя
+            .catch(error => console.error('Ошибка:', error));
         });
 
-        /* Функция для форматирования даты истечения карты */
+        // Функция для форматирования даты окончания
         function formatExpiryDate(input) {
-            let value = input.value.replace(/\D/g, ''); // Удаляем все нечисловые символы
-            
-            // Если длина больше 2, добавляем слеш
+            let value = input.value.replace(/\D/g, '');
+
             if (value.length > 2) {
-                value = value.slice(0, 2) + '/' + value.slice(2, 4); // Форматируем как MM/YY
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
             }
 
-            input.value = value; // Устанавливаем отформатированное значение
-        }
-
-        /* Функция для форматирования номера карты 
-            по 4 цифры */
-        document.getElementById('card_number').addEventListener('input', formatCardNumber);
-
-        function formatCardNumber(event) {
-            const input = event.target;
-            let value = input.value.replace(/\D/g, ''); // Удаляем все нечисловые символы
-            
-            // Формируем строку с пробелами после каждых 4 цифр
-            value = value.match(/.{1,4}/g)?.join(' ') || value;
-
-            input.value = value; // Устанавливаем отформатированное значение
+            input.value = value;
         }
     </script>
     
