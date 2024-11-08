@@ -119,34 +119,113 @@ p {
   white-space: nowrap; /* Запретить перенос строк внутри этого элемента */
 }
 
+    /* Медиазапросы */
+
+/* Ширина экрана до 1024px */
 @media (max-width: 1024px) {
   h1 {
-    font-size: 4.5rem; /* Уменьшение заголовка на малых экранах */
+    font-size: 5.5rem;
+    padding: 0.4rem 2.5rem;
+    margin-left: 5vw;
+  }
+
+  .p-container {
+    max-width: 80%;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 
   p {
-    font-size: 1rem; /* Уменьшение текста на малых экранах */
+    font-size: 0.9rem;
   }
 
-  .container, .p-container {
-    padding: 1rem; /* Уменьшение отступов на малых экранах */
+  .burger-icon span {
+    width: 3.5rem;
   }
 
-  .wrapper {
-    padding: 3vw; /* Уменьшение отступов для моб. версий */
+  .menu ul li a {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 600px) {
+/* Ширина экрана до 800px */
+@media (max-width: 800px) {
   h1 {
-    font-size: 3.5rem; /* Доп. уменьшение заголовка для смартфонов */
+    font-size: 4.5rem;
+    padding: 0.3rem 2rem;
+    margin-left: 3vw;
+  }
+
+  .p-container {
+    max-width: 85%;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
 
   p {
-    font-size: 0.9rem; /* Размер шрифта для смартфонов */
+    font-size: 0.9rem;
   }
 
-  .p-container, .wrapper {
-    padding: 1rem; /* Оптимизация отступов на малых экранах */
+  .burger-icon span {
+    width: 3rem;
+  }
+
+  .menu ul li a {
+    font-size: 1rem;
+  }
+}
+
+
+/* Ширина экрана до 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 90%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .burger-icon span {
+    width: 2.5rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ширина экрана до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    margin-left: 2vw;
+  }
+
+  .p-container {
+    max-width: 95%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .burger-icon span {
+    width: 2rem;
+  }
+
+  .menu ul li a {
+    font-size: 0.9rem;
   }
 }

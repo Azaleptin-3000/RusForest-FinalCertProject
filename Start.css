@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Chalkduster';
+  src: url('/fonts/Chalkduster.ttf') format('truetype');
+}
+
+body {
+  min-height: 100vh;
+  background: url('../img/4688e5e7d2aa271c2c1b031d45a20301.jpeg') no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Добавляем Flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+h1 {
+  font-family: 'Chalkduster', sans-serif;
+  font-size: 10rem; /* Адаптивный размер шрифта */
+  color: rgb(77, 97, 42); /* Цвет текста заголовка */
+  margin-top: 2rem; /* Отступ сверху */
+  border: 0.4rem solid rgb(68, 110, 26); /* Толщина и цвет рамки */
+  padding: 0.5rem 3rem; /* Внутренний отступ */
+  padding-bottom: 4rem; /* Увеличенный нижний отступ */
+  border-radius: 7rem; /* Скруглённые углы */
+  text-align: center; /* Центрирование текста */
+  display: inline-block; /* Блочный элемент с размерами по содержимому */
+  white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачная плашка для заголовка */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+
+    /* Медиазапросы */
+
+/* Ширина экрана до 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5.5rem;
+    padding: 0.4rem 2.5rem;
+    margin-left: 5vw;
+  }
+}
+
+/* Ширина экрана до 800px */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+    padding: 0.3rem 2rem;
+    margin-left: 3vw;
+  }
+}
+
+/* Ширина экрана до 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: 2vw;
+  }
+}
+
+  /* Ширина экрана до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    margin-left: 2vw;
+  }
+}
