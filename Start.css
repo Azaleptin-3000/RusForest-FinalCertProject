@@ -15,10 +15,16 @@ body {
   align-items: center; /* Центрируем по вертикали */
 }
 
+/* Стили для ссылки */
+h1 a {
+  color: darkolivegreen; /* Установите желаемый цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
 h1 {
   font-family: 'Chalkduster', sans-serif;
   font-size: 10rem; /* Адаптивный размер шрифта */
-  color: rgb(77, 97, 42); /* Цвет текста заголовка */
+  color: darkolivegreen; /* Цвет текста заголовка */
   margin-top: 2rem; /* Отступ сверху */
   border: 0.4rem solid rgb(68, 110, 26); /* Толщина и цвет рамки */
   padding: 0.5rem 3rem; /* Внутренний отступ */
