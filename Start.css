@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Chalkduster';
+  src: url('/fonts/Chalkduster.ttf') format('truetype');
+}
+
+body {
+  min-height: 100vh;
+  background: url('/img/4688e5e7d2aa271c2c1b031d45a20301.jpeg') no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Добавляем Flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+h1 {
+  font-family: 'Chalkduster', sans-serif;
+  font-size: 9rem; /* Адаптивный размер шрифта */
+  margin-top: 4rem; /* Отступ сверху */
+  margin-bottom: 0rem; /* Отступ снизу */
+  border: 0.3rem solid rgb(64, 80, 19); /* Толщина и цвет рамки */
+  padding: 0.75rem 5rem; /* Внутренний отступ */
+  padding-bottom: 1.5rem; /* Увеличенный нижний отступ */
+  border-radius: 6rem; /* Скруглённые углы */
+  text-align: center; /* Центрирование текста */
+  display: inline-block; /* Блочный элемент с размерами по содержимому */
+  white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+  line-height: 1.4; /* Увеличиваем высоту строки */
+  transform: translateY(-6rem); /* Небольшое смещение вверх */
+  /* color: darkolivegreen; /* Цвет текста заголовка */
+  background-color: rgba(255, 255, 255, 0.4); /* Полупрозрачная плашка под заголовком */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); /* Тень для текста */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  }
+
+.gradient-text {
+  background: linear-gradient(to bottom, rgb(112, 173, 7), rgb(81, 112, 31), rgb(59, 87, 38)); /* Цвет градиента */
+    -webkit-background-clip: text; /* Обрезка фона по тексту */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+  padding-bottom: 0.2em; /* Добавляем отступ снизу для текста */
+  display: inline-block; /* Позволяет добавлять padding и margin */
+}
+
+/* Стили для ссылки */
+h1 a {
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+
+    /* Медиазапросы */
+
+/* Ширина экрана до 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5.5rem;
+    padding: 0.4rem 2.5rem;
+    margin-left: 5vw;
+  }
+}
+
+/* Ширина экрана до 800px */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.5rem;
+    padding: 0.3rem 2rem;
+    margin-left: 3vw;
+  }
+}
+
+/* Ширина экрана до 600px */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: 2vw;
+  }
+}
+
+  /* Ширина экрана до 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    margin-left: 2vw;
+  }
+}
